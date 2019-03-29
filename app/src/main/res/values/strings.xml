@@ -5,4 +5,16 @@
     <string name="password">Mật khẩu</string>
     <string name="signup">Đăng ký mới</string>
     <string name="forget_pass">Quên mật khẩu</string>
+    <string name="sign_up">Đăng Ký Tài Khoản</string>
+    <string name="user">Người dùng</string>
+    <string name="admins">Nhà tuyển dụng</string>
+    <string name="sdt">SDT:</string>
+    <string name="nu">Nữ</string>
+    <string name="nam">Nam</string>
+    <string name="gioi_tinh">Giới tính:</string>
+    <string name="dia_chi">Địa chỉ:</string>
+    <string name="pass">Mật khẩu:</string>
+    <string name="email">E-mail:</string>
+    <string name="ten_dang_nhap">Tên đăng nhập:</string>
+    <string name="name">Họ tên:</string>
 </resources>

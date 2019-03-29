@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="dang_nhap">ĐĂNG NHẬP</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="signup">Đăng ký mới</string>
+    <string name="forget_pass">Quên mật khẩu</string>
 </resources>

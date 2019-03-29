@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FragmentNTD" />
+        <activity android:name=".FragmentND" />
+        <activity android:name=".SignUp"></activity>
     </application>
 
 </manifest>

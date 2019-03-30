@@ -8,50 +8,38 @@
     android:orientation="vertical"
     tools:context=".SignUp">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="VectorDrawableCompat" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:paddingTop="25dp"
         android:text="@string/sign_up"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rdbNguoidung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user" />
 
-        <RadioButton
-            android:id="@+id/rdbNguoidung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/user" />
-
-        <RadioButton
-            android:id="@+id/rdbNguoituyendung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/admins" />
-    </LinearLayout>
+            <RadioButton
+                android:id="@+id/rdbNguoituyendung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/admins" />
+        </RadioGroup>
 
     <FrameLayout
         android:id="@+id/listFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     </FrameLayout>
 

@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name"
+            android:text="@string/ten_doanh_nghiep"
             android:textColor="@color/colorPrimary"
             android:textSize="15sp"
             android:paddingLeft="5dp"/>

@@ -7,7 +7,8 @@ import android.widget.RadioButton;
 
 public class SignUp extends AppCompatActivity {
 
-    RadioButton rdb;
+    RadioButton rdbND;
+    RadioButton rdbNTD;
     android.support.v4.app.FragmentManager fm;
 
     @Override
@@ -17,12 +18,22 @@ public class SignUp extends AppCompatActivity {
 
         fm = getSupportFragmentManager();
 
-        rdb = (RadioButton) findViewById(R.id.rdbNguoidung);
-        rdb.setOnClickListener(new View.OnClickListener() {
+        rdbND = (RadioButton) findViewById(R.id.rdbNguoidung);
+        rdbND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 android.support.v4.app.FragmentTransaction ft_add = fm.beginTransaction();
                 ft_add.add(R.id.listFragment, new FragmentND());
+                ft_add.commit();
+            }
+        });
+
+        rdbNTD = (RadioButton) findViewById(R.id.rdbNguoituyendung);
+        rdbNTD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                android.support.v4.app.FragmentTransaction ft_add = fm.beginTransaction();
+                ft_add.add(R.id.listFragment, new FragmentNTD());
                 ft_add.commit();
             }
         });

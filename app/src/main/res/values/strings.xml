@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Tìm Kiếm Việc Làm</string>
     <string name="dang_nhap">ĐĂNG NHẬP</string>
     <string name="username">Tên đăng nhập</string>
     <string name="password">Mật khẩu</string>
@@ -18,4 +18,6 @@
     <string name="ten_dang_nhap">Tên đăng nhập:</string>
     <string name="name">Họ tên:</string>
     <string name="ten_doanh_nghiep">Tên doanh nghiệp:</string>
+    <string name="nhap_email">Nhập E-mail</string>
+    <string name="send">Gửi</string>
 </resources>

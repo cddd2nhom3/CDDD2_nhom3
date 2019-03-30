@@ -67,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
         btnMatPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //showDialog();
-                Toast.makeText(MainActivity.this, "Đã Đặt Lại Mật Khẩu.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, QuenMatKhau.class);
+                startActivity(intent);
+
             }
         });
     }

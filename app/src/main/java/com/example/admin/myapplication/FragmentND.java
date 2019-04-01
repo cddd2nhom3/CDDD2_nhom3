@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class FragmentND extends Fragment {
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -15,4 +17,6 @@ public class FragmentND extends Fragment {
         View view = inflater.inflate(R.layout.activity_fragment_nd, container, false);
         return view;
     }
+
+
 }

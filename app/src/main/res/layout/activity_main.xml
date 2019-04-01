@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/ic_launcher_background"
+        android:src="@drawable/user"
         tools:ignore="VectorDrawableCompat" />
 
     <TextView

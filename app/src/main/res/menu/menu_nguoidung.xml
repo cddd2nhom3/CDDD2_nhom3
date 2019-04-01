@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/hoSoCaNhan"
+            android:title="Hồ Sơ Cá Nhân" />
+        <item
+            android:id="@+id/doiMatKhau"
+            android:title="Đổi Mật Khẩu" />
+        <item
+            android:id="@+id/xemLichSu"
+            android:title="Xem Lịch sử" />
+        <item
+            android:id="@+id/quanTam"
+            android:title="Quan Tâm" />
+        <item
+            android:id="@+id/dangXuat"
+            android:title="Đăng Xuất" />
+    </group>
+</menu>

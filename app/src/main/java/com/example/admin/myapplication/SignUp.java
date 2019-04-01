@@ -24,6 +24,7 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 android.support.v4.app.FragmentTransaction ft_add = fm.beginTransaction();
                 ft_add.add(R.id.listFragment, new FragmentND());
+                ft_add.replace(R.id.listFragment,new FragmentNTD());
                 ft_add.commit();
             }
         });
@@ -34,6 +35,7 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 android.support.v4.app.FragmentTransaction ft_add = fm.beginTransaction();
                 ft_add.add(R.id.listFragment, new FragmentNTD());
+                ft_add.replace(R.id.listFragment,new FragmentND());
                 ft_add.commit();
             }
         });

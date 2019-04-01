@@ -3,25 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/bgdangky"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".FragmentND">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/name"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            android:paddingLeft="5dp"/>
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/edtHoTen"
             android:layout_width="match_parent"
@@ -29,17 +30,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/ten_dang_nhap"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            android:paddingLeft="5dp"/>
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/edtUsername"
             android:layout_width="match_parent"
@@ -47,17 +49,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/email"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            android:paddingLeft="5dp"/>
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
@@ -65,17 +68,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/pass"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            android:paddingLeft="5dp"/>
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
@@ -83,17 +87,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/dia_chi"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            android:paddingLeft="5dp"/>
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/edtDiachi"
             android:layout_width="match_parent"
@@ -101,41 +106,49 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/gioi_tinh"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            android:paddingLeft="5dp"/>
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <RadioButton
                 android:id="@+id/rdbNam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nam"/>
+                android:text="@string/nam" />
+
             <RadioButton
                 android:id="@+id/rdbNu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nu"/>
+                android:text="@string/nu" />
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/sdt"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            android:paddingLeft="5dp"/>
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/edtSDT"
             android:layout_width="match_parent"
@@ -146,5 +159,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/signup"/>
+        android:text="@string/signup" />
 </LinearLayout>

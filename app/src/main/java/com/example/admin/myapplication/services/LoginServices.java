@@ -9,9 +9,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-/**
- * Created by LynkMieu on 4/9/2017.
- */
+
 
 public class LoginServices extends BaseFireBase {
     private FirebaseAuth auth;

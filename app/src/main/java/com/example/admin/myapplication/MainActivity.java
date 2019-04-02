@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void setControl(){
         btnDangKy = (Button) findViewById(R.id.btnDangKy);
-        btnDangNhap = (Button) findViewById(R.id.btnDangNhap);
-        btnMatPassword = (Button) findViewById(R.id.btnForget);
+        btnDangNhap = (Button) findViewById(R.id.btn_login_email);
+        btnMatPassword = (Button) findViewById(R.id.tv_lost_pass);
 
     }
     public void setEvent(){

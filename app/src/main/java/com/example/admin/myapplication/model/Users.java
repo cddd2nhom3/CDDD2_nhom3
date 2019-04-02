@@ -2,9 +2,6 @@ package com.example.admin.myapplication.model;
 
 import java.io.Serializable;
 
-/**
- * Created by LynkMieu on 4/9/2017.
- */
 
 public class Users implements Serializable {
     private  String uid;

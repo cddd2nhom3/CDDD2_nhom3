@@ -6,9 +6,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-/**
- * Created by LynkMieu on 4/9/2017.
- */
 
 public abstract class BaseFireBase {
     private DatabaseReference mDatabase;

@@ -16,9 +16,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
-/**
- * Created by LynkMieu on 4/9/2017.
- */
 
 public class RegisterServices extends BaseFireBase {
     private FirebaseAuth auth;

@@ -1,8 +1,5 @@
 package com.example.admin.myapplication.define;
 
-/**
- * Created by LynkMieu on 11/18/2016.
- */
 
 public class Constants {
     // NOTE IN FIREBASE

@@ -4,7 +4,9 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -31,4 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             mProgressDialog.dismiss();
         }
     }
+
+    @Nullable
+    public abstract View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState);
 }

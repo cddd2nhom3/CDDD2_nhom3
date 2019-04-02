@@ -4,11 +4,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.admin.myapplication.utils.Utils;
 
 public class QuenMatKhau extends AppCompatActivity {
 
     Button btnGui;
+    EditText email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,7 @@ public class QuenMatKhau extends AppCompatActivity {
         setContentView(R.layout.activity_quen_mat_khau);
 
         btnGui = (Button) findViewById(R.id.btnSend);
+
 
         btnGui.setOnClickListener(new View.OnClickListener() {
             @Override

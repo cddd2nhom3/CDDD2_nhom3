@@ -32,4 +32,7 @@
     <string name="login_title">Đăng Nhập</string>
     <string name="fblogin">Đăng Nhập FaceBook</string>
     <string name="register_new">Đăng Ký Mới</string>
+    <string name="verifiation">Thành công.</string>
+    <string name="email_error">Email không đúng hoặc chưa được đăng ký.</string>
+    <string name="pass_erro">Mật khẩu không chính xác.</string>
 </resources>

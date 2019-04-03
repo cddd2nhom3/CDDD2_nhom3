@@ -33,7 +33,4 @@ public abstract class BaseActivity extends AppCompatActivity {
             mProgressDialog.dismiss();
         }
     }
-
-    @Nullable
-    public abstract View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState);
 }

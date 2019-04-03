@@ -64,11 +64,6 @@ public class MainActivity extends BaseActivity {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return null;
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
         //mAuth.addAuthStateListener(mAuthListener);

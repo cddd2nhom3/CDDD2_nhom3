@@ -7,8 +7,7 @@
     android:background="@color/white_smoke"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".FragmentND">
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"

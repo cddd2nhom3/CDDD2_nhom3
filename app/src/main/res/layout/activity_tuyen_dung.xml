@@ -8,7 +8,7 @@
     android:background="@color/white_smoke"
     android:gravity="center"
     android:padding="16dp"
-    tools:context=".FragmentNTD">
+    tools:context=".TuyenDung">
 
     <LinearLayout
         android:orientation="horizontal"

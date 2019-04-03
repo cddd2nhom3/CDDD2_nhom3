@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TrangChu"></activity>
+        <activity android:name=".TuyenDung"></activity>
+        <activity android:name=".NguoiDung" />
+        <activity android:name=".TrangChu" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".QuenMatKhau" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +23,7 @@
         </activity>
         <activity android:name=".FragmentNTD" />
         <activity android:name=".FragmentND" />
-        <activity android:name=".SignUp" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

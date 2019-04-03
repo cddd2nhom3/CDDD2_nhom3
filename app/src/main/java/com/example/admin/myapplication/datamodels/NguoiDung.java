@@ -1,6 +1,7 @@
 package com.example.admin.myapplication.datamodels;
 
 public class NguoiDung {
+    private String uid;
     private String hoTen;
     private String email;
     private String matKhau;
@@ -8,7 +9,8 @@ public class NguoiDung {
     private String gioiTinh;
     private int soDienThoai;
 
-    public NguoiDung(String hoTen, String email, String matKhau, String diaChi, String gioiTinh, int soDienThoai) {
+    public NguoiDung(String Uid, String hoTen, String email, String matKhau, String diaChi, String gioiTinh, int soDienThoai) {
+        this.uid = Uid;
         this.hoTen = hoTen;
         this.email = email;
         this.matKhau = matKhau;
@@ -16,6 +18,7 @@ public class NguoiDung {
         this.gioiTinh = gioiTinh;
         this.soDienThoai = soDienThoai;
     }
+    public String getUid() { return uid;}
 
     public String getHoTen() {
         return hoTen;
@@ -43,6 +46,10 @@ public class NguoiDung {
 
     public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public void setEmail(String email) {

@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 
 import com.example.admin.myapplication.base.BaseFireBase;
+import com.example.admin.myapplication.datamodels.NguoiDung;
+import com.example.admin.myapplication.model.Users;
 import com.example.admin.myapplication.define.Constants;
 import com.example.admin.myapplication.listener.RegisterListener;
-import com.example.admin.myapplication.model.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -51,7 +52,6 @@ public class RegisterServices extends BaseFireBase {
                                             //Tiến hành thông tin user vào Database
                                             Users users = new Users();
                                             users.setUid(userFB.getUid());
-                                            users.setName("www.AndroidCoBan.Com");
                                             users.setEmail(userFB.getEmail());
                                             createAccountInDatabase(users, new RegisterListener() {
                                                 @Override

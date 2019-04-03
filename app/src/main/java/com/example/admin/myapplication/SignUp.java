@@ -1,5 +1,6 @@
 package com.example.admin.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,16 +17,11 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        fm = getSupportFragmentManager();
-
         rdbND = (RadioButton) findViewById(R.id.rdbNguoidung);
         rdbND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.support.v4.app.FragmentTransaction ft_add = fm.beginTransaction();
-                ft_add.add(R.id.listFragment, new FragmentNTD());
-                ft_add.replace(R.id.listFragment,new FragmentND());
-                ft_add.commit();
+                startActivity(new Intent(SignUp.this, NguoiDung.class));
             }
         });
 
@@ -33,10 +29,7 @@ public class SignUp extends AppCompatActivity {
         rdbNTD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.support.v4.app.FragmentTransaction ft_add = fm.beginTransaction();
-                ft_add.add(R.id.listFragment, new FragmentND());
-                ft_add.replace(R.id.listFragment,new FragmentNTD());
-                ft_add.commit();
+                startActivity(new Intent(SignUp.this, TuyenDung.class));
             }
         });
     }

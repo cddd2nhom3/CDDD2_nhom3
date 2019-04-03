@@ -10,4 +10,6 @@
     <color name="gg_backgound">#d34836</color>
     <color name="home_color">#D81B60</color>
     <color name="com_facebook_blue">#3B5998</color>
+    <color name="wanring">#f98116</color>
+    <color name="hot">#e50000</color>
 </resources>

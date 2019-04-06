@@ -35,4 +35,136 @@
     <string name="verifiation">Thành công.</string>
     <string name="email_error">Email không đúng hoặc chưa được đăng ký.</string>
     <string name="pass_erro">Mật khẩu không chính xác.</string>
+    <string name="title">Tìm Kiếm Công Việc Mơ Ước</string>
+    <string name="title2">Nâng Bước Thành Công</string>
+    <string name="chucdanh">Nhập chức danh, vị trí... </string>
+    <string name="nganhnghe">Tất cả ngành nghề </string>
+    <string name="diadiem">Địa Điểm </string>
+    <string name="timkiem">Tìm Kiếm </string>
+    <string-array name="TenViecLam">
+        <item>An Ninh / Bảo Vệ</item>
+        <item>An toàn lao động </item>
+        <item>Ban hàng / Kinh doanh </item>
+        <item>Ban lẻ / Bán sỉ </item>
+        <item>Bao hiểm </item>
+        <item>Bat động sản</item>
+        <item>Bien phiên dịch</item>
+        <item>Buu chính viễn thông</item>
+        <item>Chan nuôi / Thú y</item>
+        <item>Chung khoán</item>
+        <item>CNTT - Phần cứng / Mạng</item>
+        <item>CNTT - Phần mềm</item>
+        <item>Cong nghệ sinh học</item>
+        <item>Cong nghệ thực phẩm / Dinh dưỡng</item>
+        <item>Co khí / Ô tô / Tự động hóa</item>
+        <item>Dau khí</item>
+        <item>Det may / Da giày / Thời trang</item>
+        <item>Dich vụ khách hàng</item>
+        <item>Du lịch</item>
+        <item>Duoc phẩm</item>
+        <item>Đien / Điện tử / Điện lạnh</item>
+        <item>Do gỗ</item>
+        <item>Giai trí</item>
+        <item>Giao dục / Đào tạo</item>
+        <item>Hang gia dụng / Chăm sóc cá nhân</item>
+        <item>Hang hải</item>
+        <item>Hang không</item>
+        <item>Sinh Viên / Mới tốt nghiệp / Thực tập</item>
+    </string-array>
+
+
+    <string-array name="KeyTenViecLam">
+
+
+        <item>51</item>
+        <item>58 </item>
+        <item>31 </item>
+        <item>30 </item>
+        <item>23 </item>
+        <item>28</item>
+        <item>38</item>
+        <item>32</item>
+        <item>52</item>
+        <item>46</item>
+        <item>63</item>
+        <item>1</item>
+        <item>69</item>
+        <item>70</item>
+        <item>14</item>
+        <item>26</item>
+        <item>39</item>
+        <item>12</item>
+        <item>34</item>
+        <item>7</item>
+        <item>48</item>
+        <item>35</item>
+        <item>15</item>
+        <item>13</item>
+        <item>10</item>
+        <item>61</item>
+        <item>60</item>
+        <item>45</item>
+    </string-array>
+
+    <string-array name="TenThanhPho">
+        <item>Toan quốc</item>
+        <item>Ha Nội</item>
+        <item>Ho Chí Minh</item>
+        <item>An Giang</item>
+        <item>Ba Rịa - Vũng Tàu</item>
+        <item>Bac Liêu</item>
+        <item>Bac Cạn</item>
+        <item>Bac Giang</item>
+        <item>Bac Ninh</item>
+        <item>Ben Tre</item>
+        <item>Binh Dương</item>
+        <item>Binh Định</item>
+        <item>Binh Phước</item>
+        <item>Binh Thuận</item>
+        <item>Ca Mau</item>
+        <item>Cao Bằng</item>
+        <item>Can Thơ</item>
+        <item>Dak Lak</item>
+        <item>Dak Nông</item>
+        <item>Da Nẵng</item>
+        <item>Dien Biên</item>
+        <item>Dong Bằng Sông Cửu Long</item>
+        <item>Dong Nai</item>
+        <item>Dong Tháp</item>
+        <item>Gia Lai</item>
+        <item>Ha Giang</item>
+        <item>Ha Nam</item>
+    </string-array>
+
+    <string-array name="KeyThanhPho">
+        <item>1065</item>
+        <item>4</item>
+        <item>8</item>
+        <item>76</item>
+        <item>64</item>
+        <item>781</item>
+        <item>281</item>
+        <item>240</item>
+        <item>241</item>
+        <item>75</item>
+        <item>650</item>
+        <item>56</item>
+        <item>651</item>
+        <item>62</item>
+        <item>78</item>
+        <item>26</item>
+        <item>71</item>
+        <item>50</item>
+        <item>1042</item>
+        <item>511</item>
+        <item>900</item>
+        <item>1064</item>
+        <item>61</item>
+        <item>67</item>
+        <item>59</item>
+        <item>19</item>
+        <item>351</item>
+
+
+    </string-array>
 </resources>

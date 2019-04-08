@@ -31,7 +31,7 @@ public class FirstFragment extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         ImageView imgBack = (ImageView) findViewById(R.id.btnBack);
         lvDanhSach = (ListView) findViewById(R.id.lvdanhsach);
         getAndUpdateLink();
@@ -88,7 +88,7 @@ public class FirstFragment extends Activity{
                 // Log.d("đã vào tới đây", "da vao toi day");
                 Document doccument = Jsoup.connect(url).get();
                 Elements tieude = doccument.select("h3.job");
-//                Log.d("aaa", tieude + "");
+                Log.d("aaa", tieude + "");
                 Elements tencty = doccument.select("p.namecom");
                 Elements diadiem = doccument.select("p.location");
                 Elements luong = doccument.select("p.salary");

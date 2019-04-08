@@ -57,7 +57,7 @@ public class SearchActivity extends AppCompatActivity{
             toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
 
             navigationView = (NavigationView) findViewById(R.id.navidation);
-
+            drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
             setupDrawerContent();
             setupDrawerContenta(navigationView);
             Button btnSearch = (Button)findViewById(R.id.btnSearch);
@@ -268,6 +268,7 @@ public class SearchActivity extends AppCompatActivity{
                 startActivity(in);
 
             }else if(id == R.id.test4) {
+                finish();
                 outApp();
             }
 

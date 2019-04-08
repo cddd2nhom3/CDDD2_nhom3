@@ -29,7 +29,7 @@ public class ListViewDSActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         ImageView imgBack = (ImageView) findViewById(R.id.btnBack);
         lvDanhSach = (ListView) findViewById(R.id.lvdanhsach);
         getAndUpdateLink();
@@ -119,14 +119,13 @@ public class ListViewDSActivity extends Activity{
         protected void onPostExecute(ArrayList<ThuocTinh> result) {
 
             super.onPostExecute(result);
-            Log.d("Phat", result.size()+"");
 
+            //Log.d("Phat", result.size()+"");
             lvDanhSach = (ListView) findViewById(R.id.lvdanhsach);
             adapter = new MyAdapter(ListViewDSActivity.this,
                     R.layout.item_main, result);
             lvDanhSach.setAdapter(adapter);
             lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {

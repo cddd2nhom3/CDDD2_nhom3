@@ -31,7 +31,7 @@ public class ListViewDSHotActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         ImageView imgBack = (ImageView) findViewById(R.id.btnBack);
         lvDanhSach = (ListView) findViewById(R.id.lvdanhsach);
         getAndUpdateLink();

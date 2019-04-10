@@ -14,6 +14,7 @@ import com.example.admin.myapplication.Adapter.MyAdapter;
 import com.example.admin.myapplication.Object.Link;
 import com.example.admin.myapplication.Object.ThuocTinh;
 
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -21,10 +22,10 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 public class ListViewDSActivity extends Activity{
     String url = "";
-    static ArrayList<ThuocTinh> questions = new ArrayList<ThuocTinh>();
+    private ArrayList<ThuocTinh> questions = new ArrayList<ThuocTinh>();
     ListView lvDanhSach;
     MyAdapter adapter;
-    static ArrayList<Link> arrlink = new ArrayList<Link>();
+    private ArrayList<Link> arrlink = new ArrayList<Link>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +50,15 @@ public class ListViewDSActivity extends Activity{
     //lấy đường link
     void getAndUpdateLink() {
         Intent intent = getIntent();
-        // Log.d("intent", "intent " + intent);
+        Log.d("intent", "intent " + intent);
         if (intent != null) {
             Bundle bundle = intent.getBundleExtra("data");
             Log.d("đã vào tới đây", bundle + "");
             if (bundle != null) {
                 Link link = new Link(bundle.getString("link"));
-                Log.d("du lieu da lay", link + "");
+
                 url = link + "";
+                Log.d("đường link", url + "");
             } else {
                 arrlink.clear();
             }
@@ -72,7 +74,7 @@ public class ListViewDSActivity extends Activity{
             // Create a progressdialog
             dialog = new ProgressDialog(ListViewDSActivity.this);
             dialog.setMessage("loading...");
-            Log.d("đã chạy tới đây", dialog + "");
+            Log.d("đã vào tới đây", dialog + "");
             dialog.show();
 
         }
@@ -83,16 +85,18 @@ public class ListViewDSActivity extends Activity{
 
             // TODO Auto-generated method stub
             try {
-                // Log.d("đã vào tới đây", "da vao toi day");
-                Document doccument = Jsoup.connect(url).get();
+                Log.d("đã vào tới đây", "da vao toi day");
+                Connection conn = Jsoup.connect(url);
+                Document doccument = conn.get();
+                Log.d("Connect", doccument+ "");
                 Elements tieude = doccument.select("h3.job");
-//                Log.d("aaa", tieude + "");
                 Elements tencty = doccument.select("p.namecom");
                 Elements diadiem = doccument.select("p.location");
                 Elements luong = doccument.select("p.salary");
                 Elements ngaydang = doccument.select("div.dateposted");
-
                 Elements url2 = doccument.select("h3.job");
+
+                Log.d("load du lieu", url + "");
 
                 for (int i = 0; i < url2.size() && i < tieude.size()
                         && i < tencty.size() && i < diadiem.size()
@@ -108,7 +112,7 @@ public class ListViewDSActivity extends Activity{
                 }
             } catch (Exception e) {
                 // TODO: handle exception
-                // Log.d("đã vào tới đây", "đã vào tới đây");
+                Log.d("đã vào tới đây", "đã vào tới đây");
             }
             return questions;
             // TODO Auto-generated method stub
@@ -120,7 +124,7 @@ public class ListViewDSActivity extends Activity{
 
             super.onPostExecute(result);
 
-            //Log.d("Phat", result.size()+"");
+            Log.d("Phat", result.size()+"");
             lvDanhSach = (ListView) findViewById(R.id.lvdanhsach);
             adapter = new MyAdapter(ListViewDSActivity.this,
                     R.layout.item_main, result);

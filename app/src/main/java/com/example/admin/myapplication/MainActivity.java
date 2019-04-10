@@ -1,5 +1,6 @@
 package com.example.admin.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -98,6 +99,7 @@ public class MainActivity extends BaseActivity {
                 }
                 break;
             case R.id.btn_fb_login:
+                startActivity(new Intent(this, SearchActivity.class));
                 break;
             case R.id.tv_register:
                 startActivity( new Intent(this, SignUp.class));
@@ -107,7 +109,37 @@ public class MainActivity extends BaseActivity {
                 break;
         }
     }
+    public void onBackPressed(){
+        outApp();
+    }
+    public void outApp(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+        builder.setTitle("Exit");
+        builder.setMessage("Are you sure?");
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing but close the dialog
+                finish();
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
     /**
      * Kiểm tra dữ liệu
      * @return

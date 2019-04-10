@@ -4,8 +4,7 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 
 import com.example.admin.myapplication.base.BaseFireBase;
-import com.example.admin.myapplication.datamodels.NguoiDung;
-import com.example.admin.myapplication.model.Users;
+import com.example.admin.myapplication.Object.Users;
 import com.example.admin.myapplication.define.Constants;
 import com.example.admin.myapplication.listener.RegisterListener;
 import com.google.android.gms.tasks.OnCompleteListener;

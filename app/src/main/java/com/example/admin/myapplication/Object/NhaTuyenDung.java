@@ -1,4 +1,4 @@
-package com.example.admin.myapplication.datamodels;
+package com.example.admin.myapplication.Object;
 
 public class NhaTuyenDung {
     private String tenDoanhNghiep;

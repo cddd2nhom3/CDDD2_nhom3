@@ -8,9 +8,9 @@ import android.widget.RadioButton;
 
 public class SignUp extends AppCompatActivity {
 
+    // Khai báo biến
     RadioButton rdbND;
     RadioButton rdbNTD;
-    android.support.v4.app.FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

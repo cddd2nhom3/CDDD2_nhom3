@@ -44,31 +44,31 @@
     <string-array name="TenViecLam">
         <item>An Ninh / Bảo Vệ</item>
         <item>An toàn lao động </item>
-        <item>Ban hàng / Kinh doanh </item>
-        <item>Ban lẻ / Bán sỉ </item>
-        <item>Bao hiểm </item>
-        <item>Bat động sản</item>
+        <item>Bán hàng / Kinh doanh </item>
+        <item>Bán lẻ / Bán sỉ </item>
+        <item>Bảo hiểm </item>
+        <item>Bất động sản</item>
         <item>Bien phiên dịch</item>
-        <item>Buu chính viễn thông</item>
-        <item>Chan nuôi / Thú y</item>
-        <item>Chung khoán</item>
+        <item>Bưu chính viễn thông</item>
+        <item>Chăn nuôi / Thú y</item>
+        <item>Chứng khoán</item>
         <item>CNTT - Phần cứng / Mạng</item>
         <item>CNTT - Phần mềm</item>
-        <item>Cong nghệ sinh học</item>
-        <item>Cong nghệ thực phẩm / Dinh dưỡng</item>
-        <item>Co khí / Ô tô / Tự động hóa</item>
-        <item>Dau khí</item>
-        <item>Det may / Da giày / Thời trang</item>
-        <item>Dich vụ khách hàng</item>
+        <item>Công nghệ sinh học</item>
+        <item>Công nghệ thực phẩm / Dinh dưỡng</item>
+        <item>Cơ khí / Ô tô / Tự động hóa</item>
+        <item>Dầu khí</item>
+        <item>Dệt may / Da giày / Thời trang</item>
+        <item>Dịch vụ khách hàng</item>
         <item>Du lịch</item>
-        <item>Duoc phẩm</item>
-        <item>Đien / Điện tử / Điện lạnh</item>
-        <item>Do gỗ</item>
-        <item>Giai trí</item>
-        <item>Giao dục / Đào tạo</item>
-        <item>Hang gia dụng / Chăm sóc cá nhân</item>
-        <item>Hang hải</item>
-        <item>Hang không</item>
+        <item>Dượcc phẩm</item>
+        <item>Điện / Điện tử / Điện lạnh</item>
+        <item>Đồ gỗ</item>
+        <item>Giải trí</item>
+        <item>Giáo dục / Đào tạo</item>
+        <item>Hàng gia dụng / Chăm sóc cá nhân</item>
+        <item>Hàng hải</item>
+        <item>Hàng không</item>
         <item>Sinh Viên / Mới tốt nghiệp / Thực tập</item>
     </string-array>
 
@@ -77,10 +77,10 @@
 
 
         <item>51</item>
-        <item>58 </item>
-        <item>31 </item>
-        <item>30 </item>
-        <item>23 </item>
+        <item>58</item>
+        <item>31</item>
+        <item>30</item>
+        <item>23</item>
         <item>28</item>
         <item>38</item>
         <item>32</item>
@@ -107,33 +107,33 @@
     </string-array>
 
     <string-array name="TenThanhPho">
-        <item>Toan quốc</item>
-        <item>Ha Nội</item>
-        <item>Ho Chí Minh</item>
+        <item>Toàn quốc</item>
+        <item>Hà Nội</item>
+        <item>Hồ Chí Minh</item>
         <item>An Giang</item>
-        <item>Ba Rịa - Vũng Tàu</item>
-        <item>Bac Liêu</item>
-        <item>Bac Cạn</item>
-        <item>Bac Giang</item>
-        <item>Bac Ninh</item>
-        <item>Ben Tre</item>
-        <item>Binh Dương</item>
-        <item>Binh Định</item>
-        <item>Binh Phước</item>
-        <item>Binh Thuận</item>
-        <item>Ca Mau</item>
+        <item>Bà Rịa - Vũng Tàu</item>
+        <item>Bạc Liêu</item>
+        <item>Bắc Cạn</item>
+        <item>Bắc Giang</item>
+        <item>Bắc Ninh</item>
+        <item>Bến Tre</item>
+        <item>Bình Dương</item>
+        <item>Bình Định</item>
+        <item>Bình Phước</item>
+        <item>Bình Thuận</item>
+        <item>Cà Mau</item>
         <item>Cao Bằng</item>
-        <item>Can Thơ</item>
+        <item>Cần Thơ</item>
         <item>Dak Lak</item>
         <item>Dak Nông</item>
-        <item>Da Nẵng</item>
-        <item>Dien Biên</item>
-        <item>Dong Bằng Sông Cửu Long</item>
-        <item>Dong Nai</item>
-        <item>Dong Tháp</item>
+        <item>Đà Nẵng</item>
+        <item>Điện Biên</item>
+        <item>Đồng Bằng Sông Cửu Long</item>
+        <item>Đồng Nai</item>
+        <item>Đồng Tháp</item>
         <item>Gia Lai</item>
-        <item>Ha Giang</item>
-        <item>Ha Nam</item>
+        <item>Hà Giang</item>
+        <item>Hà Nam</item>
     </string-array>
 
     <string-array name="KeyThanhPho">

@@ -1,4 +1,4 @@
-package com.example.admin.myapplication.model;
+package com.example.admin.myapplication.Object;
 
 import java.io.Serializable;
 

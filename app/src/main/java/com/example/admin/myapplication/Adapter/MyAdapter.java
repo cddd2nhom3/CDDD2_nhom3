@@ -39,37 +39,6 @@ public class MyAdapter extends ArrayAdapter<ThuocTinh> {
         convertView = inflater.inflate(layoutID, null);
 
 
-        //get view from layout item
-        /*TextView lblTitle = (TextView) view.findViewById(R.id.txtTieuDe);
-        ImageView imgCongTy = (ImageView) view.findViewById(R.id.imgCongTy);
-        TextView lblCongTy = (TextView) view.findViewById(R.id.txtCongTy);
-        ImageView imgDiaDiem = (ImageView) view.findViewById(R.id.imgDiaDiem);
-        TextView lblDiaDiem = (TextView) view.findViewById(R.id.txtDiaDiem);
-        ImageView imgLuong = (ImageView) view.findViewById(R.id.imgLuong);
-        TextView lblLuong = (TextView) view.findViewById(R.id.txtLuong);
-        ImageView imgThoiGian = (ImageView) view.findViewById(R.id.imgThoiGian);
-        TextView lblThoiGian = (TextView) view.findViewById(R.id.txtThoiGian);
-
-        ThuocTinh jobs = listDS.get(position);
-        if (jobs != null) {
-            //Tiêu đề
-            lblTitle.setText(jobs.getTieude());
-            //Công ty
-            imgCongTy.setBackground(context.getResources().getDrawable(R.drawable.company));
-            lblCongTy.setText(jobs.getCongty());
-            //Địa điểm
-            imgDiaDiem.setBackground(context.getResources().getDrawable(R.drawable.mapsearch));
-            lblDiaDiem.setText(jobs.getDiadiem());
-            //Lương
-            imgLuong.setBackground(context.getResources().getDrawable(R.drawable.dolla));
-            lblLuong.setText(jobs.getLuong());
-            //Thời gian
-            imgThoiGian.setBackground(context.getResources().getDrawable(R.drawable.time));
-            lblThoiGian.setText(jobs.getNgaydang());
-        }
-        return view;
-    }*/
-
         TextView txtTenCV = (TextView) convertView.findViewById(R.id.txtTieuDe);
         TextView txtTenCTy = (TextView) convertView.findViewById(R.id.txtCongTy);
         TextView txtTenTP = (TextView) convertView.findViewById(R.id.txtDiaDiem);

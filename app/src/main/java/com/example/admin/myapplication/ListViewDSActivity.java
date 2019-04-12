@@ -89,15 +89,17 @@ public class ListViewDSActivity extends Activity{
                 Connection conn = Jsoup.connect(url);
                 Document doccument = conn.get();
                 Log.d("Connect", doccument+ "");
-                Elements tieude = doccument.select("h3.job");
-                Elements tencty = doccument.select("p.namecom");
-                Elements diadiem = doccument.select("p.location");
-                Elements luong = doccument.select("p.salary");
-                Elements ngaydang = doccument.select("div.dateposted");
-                Elements url2 = doccument.select("h3.job");
+                Elements tieude = doccument.select("h3");
+                Elements tencty = doccument.select("p");
+                Elements diadiem = doccument.select("p");
+                Elements luong = doccument.select("p");
+                Elements ngaydang = doccument.select("div");
+                Elements url2 = doccument.select("h3");
 
                 Log.d("load du lieu", url + "");
-
+                Log.d("tieude", tieude + "");
+                Log.d("tencty", tencty + "");
+                Log.d("diadiem", diadiem + "");
                 for (int i = 0; i < url2.size() && i < tieude.size()
                         && i < tencty.size() && i < diadiem.size()
                         && i < luong.size() && i < ngaydang.size(); i++) {

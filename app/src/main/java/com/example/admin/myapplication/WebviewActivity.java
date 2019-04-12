@@ -10,14 +10,11 @@ import android.view.Window;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.example.admin.myapplication.Adapter.MyAdapter;
+
 
 public class WebviewActivity extends Activity{
     WebView webview = null;
-    MyAdapter adapter;
     String link = "";
     ImageButton btnBack;
 
@@ -54,8 +51,6 @@ public class WebviewActivity extends Activity{
         if (savedInstanceState != null) {
             ((WebView) findViewById(R.id.webview)).restoreState(savedInstanceState);
         } else {
-            webview = (WebView) findViewById(R.id.webview);
-
             webview.getSettings().getJavaScriptEnabled();
             webview.loadUrl(link);
             webview.setLayerType(View.LAYER_TYPE_SOFTWARE, null);

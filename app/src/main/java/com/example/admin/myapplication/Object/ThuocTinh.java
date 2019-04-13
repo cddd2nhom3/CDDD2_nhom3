@@ -1,12 +1,15 @@
 package com.example.admin.myapplication.Object;
 
-public class ThuocTinh {
-    private String tieude, congty, diadiem,luong, ngaydang,link ;
+import java.io.Serializable;
+
+public class ThuocTinh implements Serializable {
+    private String tieude, congty, diadiem, luong, ngaydang, link ;
+
+    public ThuocTinh(){}
 
     public String getTieude() {
         return tieude;
     }
-
     public void setTieude(String tieude) {
         this.tieude = tieude;
     }
@@ -14,7 +17,6 @@ public class ThuocTinh {
     public String getCongty() {
         return congty;
     }
-
     public void setCongty(String congty) {
         this.congty = congty;
     }
@@ -22,7 +24,6 @@ public class ThuocTinh {
     public String getDiadiem() {
         return diadiem;
     }
-
     public void setDiadiem(String diadiem) {
         this.diadiem = diadiem;
     }
@@ -30,7 +31,6 @@ public class ThuocTinh {
     public String getLuong() {
         return luong;
     }
-
     public void setLuong(String luong) {
         this.luong = luong;
     }
@@ -38,7 +38,6 @@ public class ThuocTinh {
     public String getNgaydang() {
         return ngaydang;
     }
-
     public void setNgaydang(String ngaydang) {
         this.ngaydang = ngaydang;
     }
@@ -46,7 +45,6 @@ public class ThuocTinh {
     public String getLink() {
         return link;
     }
-
     public void setLink(String link) {
         this.link = link;
     }
@@ -59,7 +57,7 @@ public class ThuocTinh {
                 ", diadiem='" + diadiem + '\'' +
                 ", luong='" + luong + '\'' +
                 ", ngaydang='" + ngaydang + '\'' +
-                ", link='" + link + '\'' +
+                ", url='" + link + '\'' +
                 '}';
     }
     public ThuocTinh(String tieude, String congty, String diadiem, String luong, String ngaydang, String link) {

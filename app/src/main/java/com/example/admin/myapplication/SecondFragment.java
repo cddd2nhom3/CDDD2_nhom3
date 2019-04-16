@@ -90,7 +90,10 @@ public class SecondFragment extends Activity {
             // TODO Auto-generated method stub
             try {
                 // Log.d("đã vào tới đây", "da vao toi day");
-                Document doccument = Jsoup.connect(url).get();
+                Document doccument = Jsoup.connect(url)
+                        .timeout(80000)
+                        .maxBodySize(1024*1024*10)
+                        .get();
                 Elements tieude = doccument.select("h3.job");
 //                Log.d("aaa", tieude + "");
                 Elements tencty = doccument.select("p.namecom");

@@ -12,7 +12,7 @@ import com.example.admin.myapplication.Object.ThuocTinhHot;
 import com.example.admin.myapplication.R;
 
 import java.util.ArrayList;
-public class MyAdapterHot extends ArrayAdapter {
+public class MyAdapterHot extends ArrayAdapter<ThuocTinhHot> {
     Activity context = null;
     int itemlayout;
     ArrayList<ThuocTinhHot> question = null;
@@ -21,8 +21,8 @@ public class MyAdapterHot extends ArrayAdapter {
         super(context, resource, objects);
         // TODO Auto-generated constructor stub
         this.context = context;
-        itemlayout = resource;
-        question = objects;
+        this.itemlayout = resource;
+        this.question = objects;
     }
 
     @Override

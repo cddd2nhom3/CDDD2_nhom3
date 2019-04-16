@@ -84,7 +84,10 @@ public class ListViewDSHotActivity extends Activity{
             // TODO Auto-generated method stub
             try {
 //                 Log.d("đã vào", "đã vào tới đây");
-                Document doccument = Jsoup.connect(url).get();
+                Document doccument = Jsoup.connect(url)
+                        .timeout(80000)
+                        .maxBodySize(1024*1024*10)
+                        .get();
                 Elements tieude = doccument.select("p.jobtitle");
 //                Log.d("aaa", tieude + "");
                 Elements tencty = doccument.select("p.jobcompany");

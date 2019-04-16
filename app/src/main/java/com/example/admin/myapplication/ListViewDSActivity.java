@@ -14,7 +14,7 @@ import com.example.admin.myapplication.Adapter.MyAdapter;
 import com.example.admin.myapplication.Object.Link;
 import com.example.admin.myapplication.Object.ThuocTinh;
 
-import org.jsoup.Connection;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -86,17 +86,18 @@ public class ListViewDSActivity extends Activity{
             // TODO Auto-generated method stub
             try {
                 Log.d("đã vào tới đây", "da vao toi day");
-                Connection conn = Jsoup.connect(url);
-                Document doccument = conn.get();
+                Document doccument = Jsoup.connect(url)
+                        .timeout(80000)
+                        .maxBodySize(1024*1024*10)
+                        .get();
                 Log.d("Connect", doccument+ "");
-                Elements tieude = doccument.select("h3");
-                Elements tencty = doccument.select("p");
-                Elements diadiem = doccument.select("p");
-                Elements luong = doccument.select("p");
-                Elements ngaydang = doccument.select("div");
-                Elements url2 = doccument.select("h3");
+                Elements tieude = doccument.select("h3.job");
+                Elements tencty = doccument.select("p.namecom");
+                Elements diadiem = doccument.select("p.location");
+                Elements luong = doccument.select("p.salary");
+                Elements ngaydang = doccument.select("div.dateposted");
+                Elements url2 = doccument.select("h3.job");
 
-                Log.d("load du lieu", url + "");
                 Log.d("tieude", tieude + "");
                 Log.d("tencty", tencty + "");
                 Log.d("diadiem", diadiem + "");

@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@drawable/bb"
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
     <android.support.v4.widget.DrawerLayout
@@ -128,8 +129,6 @@
                         android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:src="@drawable/maps" />
-                    //tĂªn thĂ nh
-
                     <AutoCompleteTextView
                         android:background="@color/form"
                         android:id="@+id/edtDiaDiem"
@@ -163,14 +162,17 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <android.support.design.widget.NavigationView
             android:id="@+id/navidation"
+            android:background="@color/backgroundmenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:menu="@menu/item_menu"
             >
         </android.support.design.widget.NavigationView>
+
     </android.support.v4.widget.DrawerLayout>
 
 </LinearLayout>

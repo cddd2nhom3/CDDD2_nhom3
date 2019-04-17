@@ -5,10 +5,6 @@ import android.widget.EditText;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by LynkMieu on 4/9/2017.
- */
-
 public class Utils {
 
     public static  boolean isEmpty(EditText etText) {

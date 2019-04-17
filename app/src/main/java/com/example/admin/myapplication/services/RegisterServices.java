@@ -3,6 +3,7 @@ package com.example.admin.myapplication.services;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 
+import com.example.admin.myapplication.Object.NguoiDung;
 import com.example.admin.myapplication.base.BaseFireBase;
 import com.example.admin.myapplication.Object.Users;
 import com.example.admin.myapplication.define.Constants;
@@ -49,10 +50,11 @@ public class RegisterServices extends BaseFireBase {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             //Tiến hành thông tin user vào Database
-                                            Users users = new Users();
-                                            users.setUid(userFB.getUid());
-                                            users.setEmail(userFB.getEmail());
-                                            createAccountInDatabase(users, new RegisterListener() {
+                                            NguoiDung nguoidung = new NguoiDung();
+                                            nguoidung.setUid(userFB.getUid());
+                                            nguoidung.setEmail(userFB.getEmail());
+                                            //nguoidung.setHoTen(userFB.getH);
+                                            createAccountInDatabase(nguoidung, new RegisterListener() {
                                                 @Override
                                                 public void registerSuccess() {
                                                     auth.signOut(); // Đăng xuất.
@@ -83,12 +85,29 @@ public class RegisterServices extends BaseFireBase {
     /**
      * Lưu thông tin user
      *
-     * @param users
+     * @param nguoidung
      */
-    public void createAccountInDatabase(Users users, final RegisterListener listener) {
+    /*public void createAccountInDatabase(Users users, final RegisterListener listener) {
         mDatabase.child(Constants.USERS)
                 .child(users.getUid())
                 .setValue(users)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        listener.registerSuccess();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.registerFailure(e.getMessage());
+            }
+        });
+    }
+*/
+    public void createAccountInDatabase(NguoiDung nguoidung, final RegisterListener listener) {
+        mDatabase.child(Constants.NGUOIDUNG)
+                .child(nguoidung.getUid())
+                .setValue(nguoidung)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

@@ -9,6 +9,10 @@ public class NguoiDung {
     private String gioiTinh;
     private int soDienThoai;
 
+    public NguoiDung() {
+
+    }
+
     public NguoiDung(String Uid, String hoTen, String email, String matKhau, String diaChi, String gioiTinh, int soDienThoai) {
         this.uid = Uid;
         this.hoTen = hoTen;
@@ -70,5 +74,18 @@ public class NguoiDung {
 
     public void setSoDienThoai(int soDienThoai) {
         this.soDienThoai = soDienThoai;
+    }
+
+    @Override
+    public String toString() {
+        return "NguoiDung{" +
+                "uid='" + uid + '\'' +
+                ", hoTen='" + hoTen + '\'' +
+                ", email='" + email + '\'' +
+                ", matKhau='" + matKhau + '\'' +
+                ", diaChi='" + diaChi + '\'' +
+                ", gioiTinh='" + gioiTinh + '\'' +
+                ", soDienThoai=" + soDienThoai +
+                '}';
     }
 }

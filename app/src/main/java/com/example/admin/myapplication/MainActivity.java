@@ -38,8 +38,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        //loginServices = new LoginServices();
-        //mAuth =  FirebaseAuth.getInstance();
+        loginServices = new LoginServices();
+        mAuth =  FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -47,13 +47,13 @@ public class MainActivity extends BaseActivity {
                 if (userFB != null) {
                     //Kiểm tra users đã active hay chưa
                     if (userFB.isEmailVerified()){
-                        startActivity(new Intent(MainActivity.this,MainActivity.class));
+                        startActivity(new Intent(MainActivity.this,SearchActivity.class));
                         finish();
                     } else {
-                        //mAuth.signOut();
+                        mAuth.signOut();
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle("Thông Báo");
-                        builder.setMessage(getResources().getString(R.string.login_title));
+                        builder.setMessage(getResources().getString(R.string.verifiation));
                         builder.setIcon(R.drawable.user);
                         builder.create().show();
                     }
@@ -62,22 +62,20 @@ public class MainActivity extends BaseActivity {
             }
         };
     }
-
-    @Nullable
     @Override
     public void onStart() {
         super.onStart();
-        //mAuth.addAuthStateListener(mAuthListener);
+        mAuth.addAuthStateListener(mAuthListener);
     }
 
     @Override
     public void onStop() {
         super.onStop();
         if (mAuthListener != null) {
-            //mAuth.removeAuthStateListener(mAuthListener);
+            mAuth.removeAuthStateListener(mAuthListener);
         }
     }
-    @OnClick({R.id.btn_login_email, R.id.btn_fb_login, R.id.tv_register, R.id.tv_lost_pass})
+    @OnClick({R.id.btn_login_email, R.id.btn_fb_login, R.id.tv_register})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_login_email:
@@ -87,7 +85,7 @@ public class MainActivity extends BaseActivity {
                         @Override
                         public void loginSuccess() {
                             hideProgressDialog();
-                            Toast.makeText(MainActivity.this, getString(R.string.note_register), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, getString(R.string.msg_login_success), Toast.LENGTH_SHORT).show();
                         }
 
                         @Override

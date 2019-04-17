@@ -32,15 +32,16 @@
     <string name="login_title">Đăng Nhập</string>
     <string name="fblogin">Đăng Nhập FaceBook</string>
     <string name="register_new">Đăng Ký Mới</string>
-    <string name="verifiation">Thành công.</string>
-    <string name="email_error">Email không đúng hoặc chưa được đăng ký.</string>
-    <string name="pass_erro">Mật khẩu không chính xác.</string>
+    <string name="verifiation">Truy cập Email để xác thực tài khoản</string>
+    <string name="email_error">Email không đúng định dạng!</string>
+    <string name="pass_erro">Mật khẩu quá ngắn!</string>
     <string name="title">Tìm Kiếm Công Việc Mơ Ước</string>
     <string name="title2">Nâng Bước Thành Công</string>
     <string name="chucdanh">Nhập chức danh, vị trí... </string>
     <string name="nganhnghe">Tất cả ngành nghề </string>
     <string name="diadiem">Địa Điểm </string>
     <string name="timkiem">Tìm Kiếm </string>
+    <string name="msg_login_success">Đăng nhập thành công!</string>
     <string-array name="TenViecLam">
         <item>An Ninh / Bảo Vệ</item>
         <item>An toàn lao động </item>
@@ -71,7 +72,6 @@
         <item>Hàng không</item>
         <item>Sinh Viên / Mới tốt nghiệp / Thực tập</item>
     </string-array>
-
 
     <string-array name="KeyTenViecLam">
 

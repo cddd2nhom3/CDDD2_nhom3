@@ -198,14 +198,15 @@ public class SearchActivity extends AppCompatActivity {
     public void outApp() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Exit");
+        builder.setTitle("Log Out");
         builder.setMessage("Are you sure?");
 
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
-                finish();
+                Intent intent = new Intent(SearchActivity.this , MainActivity.class);
+                startActivity(intent);
                 dialog.dismiss();
             }
         });
@@ -269,8 +270,9 @@ public class SearchActivity extends AppCompatActivity {
             startActivity(in);
 
         } else if (id == R.id.test4) {
-            finish();
+
             outApp();
+
         }
 
     }

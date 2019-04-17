@@ -22,7 +22,7 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 public class ListViewDSHotActivity extends Activity{
     // URL Address
-    String url = "https://careerbuilder.vn/viec-lam/tat-ca-viec-lam-vi.html";
+    String url = "https://careerbuilder.vn/vi/";
     static ArrayList<ThuocTinhHot> questions = new ArrayList<ThuocTinhHot>();
     ListView lvDanhSach;
     MyAdapterHot adapter;

@@ -14,4 +14,5 @@
     <color name="hot">#e50000</color>
     <color name="form">#FCF9F9</color>
     <color name="background">#777</color>
+    <color name="backgroundmenu">#0065B9</color>
 </resources>

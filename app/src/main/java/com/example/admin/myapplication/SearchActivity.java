@@ -274,6 +274,9 @@ public class SearchActivity extends AppCompatActivity {
             outApp();
 
         }
-
+        else if (id == R.id.lichSuTimKiem) {
+            Intent in = new Intent(SearchActivity.this, ShowSearchHistory.class);
+            startActivity(in);
+        }
     }
 }

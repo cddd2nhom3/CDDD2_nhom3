@@ -12,7 +12,6 @@ import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 
 
-
 public class WebviewActivity extends Activity{
     WebView webview = null;
     String link = "";

@@ -30,6 +30,7 @@
         <activity android:name=".ListViewDSActivity" />
         <activity android:name=".ListViewDSHotActivity" />
         <activity android:name=".WebviewActivity" />
+        <activity android:name=".SignUp" />
     </application>
 
 </manifest>

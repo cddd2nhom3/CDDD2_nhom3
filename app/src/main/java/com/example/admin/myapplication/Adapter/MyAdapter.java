@@ -18,7 +18,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 public class MyAdapter extends ArrayAdapter<ThuocTinh> {
-    private Activity context = null;/* = null;*/
+    private Activity context = null;
     private int layoutID;
     private ArrayList<ThuocTinh> listDS = null/*question = null*/;
 

@@ -25,7 +25,10 @@ import android.widget.TextView;
 
 
 import com.example.admin.myapplication.Adapter.MyAdapter;
+import com.example.admin.myapplication.Object.LichSu;
 import com.example.admin.myapplication.Object.Link;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,6 +36,7 @@ import java.util.HashMap;
 public class SearchActivity extends AppCompatActivity {
     static ArrayList<Link> link = new ArrayList<Link>();
     private MyAdapter adapter;
+    private DatabaseReference mDatabase;
 
     String strUrl = "https://careerbuilder.vn/viec-lam/";
     String Url1 = "c";
@@ -55,6 +59,7 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
 
         navigationView = (NavigationView) findViewById(R.id.navidation);
@@ -146,6 +151,11 @@ public class SearchActivity extends AppCompatActivity {
 
                 String tenVLChon = edtTenViecLam.getText().toString();
                 String tenTPChon = edtTenTP.getText().toString();
+                String search_chucvu= edtChucDanh.getText().toString();
+                String search_nganh = edtTenViecLam.getText().toString();
+                String search_thanhpho = edtTenTP.getText().toString();
+                LichSu LS = new LichSu(search_chucvu, search_nganh, search_thanhpho);
+                mDatabase.child("SearchHistory").push().setValue(LS);
 
                 Log.d("testTP",tenVLChon);
                 Log.d("testVL",tenTPChon);
@@ -273,8 +283,7 @@ public class SearchActivity extends AppCompatActivity {
 
             outApp();
 
-        }
-        else if (id == R.id.lichSuTimKiem) {
+        } else if (id == R.id.lichSuTimKiem) {
             Intent in = new Intent(SearchActivity.this, ShowSearchHistory.class);
             startActivity(in);
         }

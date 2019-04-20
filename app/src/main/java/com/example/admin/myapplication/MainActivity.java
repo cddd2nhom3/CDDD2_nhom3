@@ -102,7 +102,7 @@ public class MainActivity extends BaseActivity {
             case R.id.tv_register:
                 startActivity( new Intent(this, SignUp.class));
                 break;
-            case R.id.tv_lost_pass:
+            case R.id.quenMatKhau:
                 startActivity(new Intent(this, QuenMatKhau.class));
                 break;
         }

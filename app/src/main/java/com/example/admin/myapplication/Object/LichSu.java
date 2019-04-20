@@ -38,4 +38,13 @@ public class LichSu {
     public void setSearch_thanhpho(String search_thanhpho) {
         this.search_thanhpho = search_thanhpho;
     }
+
+    @Override
+    public String toString() {
+        return "LichSu{" +
+                "search_chucvu='" + search_chucvu + '\'' +
+                ", search_nganh='" + search_nganh + '\'' +
+                ", search_thanhpho='" + search_thanhpho + '\'' +
+                '}';
+    }
 }

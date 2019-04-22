@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "510376838157-52331h4m3ub926e0iq6c1rai6j5iqh5r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androidcoban.mystore",
+            "certificate_hash": "9686739b6c22e2c3406dd49eb588bf0579bf03af"
+          }
+        },
+        {
           "client_id": "510376838157-jhq93hs74ds04m74stkuukd4j4pg62tn.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -26,7 +26,7 @@ import butterknife.OnClick;
 
 public class NguoiDung extends BaseActivity {
 
-    @BindView(R.id.edtEmail)
+   /* @BindView(R.id.edtEmail)
     EditText tvEmail;
     @BindView(R.id.edtPassword)
     EditText tvPassword;
@@ -75,18 +75,18 @@ public class NguoiDung extends BaseActivity {
                     });
                 }
                 break;
-            /*case R.id.btn_back_login:
+            *//*case R.id.btn_back_login:
                 finish();
                 break;
             case R.id.btn_reset_password:
-                break;*/
+                break;*//*
         }
     }
 
-    /**
+    *//**
      * Kiểm tra dữ liệu
      * @return
-     */
+     *//*
     private boolean checkInputData() {
         if (Utils.isEmpty(tvEmail) && Utils.isEmpty(tvPassword)) {
             email = tvEmail.getText().toString().trim();
@@ -106,5 +106,5 @@ public class NguoiDung extends BaseActivity {
         } else {
             return false;
         }
-    }
+    }*/
 }

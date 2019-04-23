@@ -50,11 +50,11 @@ public class RegisterServices extends BaseFireBase {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             //Tiến hành thông tin user vào Database
-                                            NguoiDung nguoidung = new NguoiDung();
-                                            nguoidung.setUid(userFB.getUid());
-                                            nguoidung.setEmail(userFB.getEmail());
+                                             Users users = new Users();
+                                            users.setUid(userFB.getUid());
+                                            users.setEmail(userFB.getEmail());
                                             //nguoidung.setHoTen(userFB.getH);
-                                            createAccountInDatabase(nguoidung, new RegisterListener() {
+                                            createAccountInDatabase(users, new RegisterListener() {
                                                 @Override
                                                 public void registerSuccess() {
                                                     auth.signOut(); // Đăng xuất.
@@ -85,9 +85,9 @@ public class RegisterServices extends BaseFireBase {
     /**
      * Lưu thông tin user
      *
-     * @param nguoidung
+     * @param users
      */
-    /*public void createAccountInDatabase(Users users, final RegisterListener listener) {
+    public void createAccountInDatabase(Users users, final RegisterListener listener) {
         mDatabase.child(Constants.USERS)
                 .child(users.getUid())
                 .setValue(users)
@@ -103,8 +103,7 @@ public class RegisterServices extends BaseFireBase {
             }
         });
     }
-*/
-    public void createAccountInDatabase(NguoiDung nguoidung, final RegisterListener listener) {
+    /*public void createAccountInDatabase(NguoiDung nguoidung, final RegisterListener listener) {
         mDatabase.child(Constants.NGUOIDUNG)
                 .child(nguoidung.getUid())
                 .setValue(nguoidung)
@@ -119,5 +118,5 @@ public class RegisterServices extends BaseFireBase {
                 listener.registerFailure(e.getMessage());
             }
         });
-    }
+    }*/
 }

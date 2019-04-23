@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class TuyenDung extends AppCompatActivity {
-    private static final String TAG = TuyenDung.class.getSimpleName();
+    /*private static final String TAG = TuyenDung.class.getSimpleName();
     private EditText edttenDoanhNghiep , edtEmail , edtMatKhau , edtDiaChi , edtSoDienThoai;
     private Button btnSubMit;
     private DatabaseReference mDatabase;
@@ -25,8 +25,8 @@ public class TuyenDung extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuyen_dung);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        /*FirebaseDatabase database = FirebaseDatabase.getInstance();*/
-        /*final DatabaseReference myRef = database.getReference("NhaTuyenDung");*/
+        *//*FirebaseDatabase database = FirebaseDatabase.getInstance();*//*
+        *//*final DatabaseReference myRef = database.getReference("NhaTuyenDung");*//*
         edttenDoanhNghiep = (EditText) findViewById(R.id.edtHoTen);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtMatKhau = (EditText) findViewById(R.id.edtPassword);
@@ -62,5 +62,5 @@ public class TuyenDung extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-    }
+    }*/
 }

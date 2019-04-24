@@ -289,5 +289,9 @@ public class SearchActivity extends AppCompatActivity {
             Intent in = new Intent(SearchActivity.this, ShowSearchHistory.class);
             startActivity(in);
         }
+        else if (id == R.id.hoSoCaNhan) {
+            Intent in = new Intent(SearchActivity.this, NguoiDung.class);
+            startActivity(in);
+        }
     }
 }

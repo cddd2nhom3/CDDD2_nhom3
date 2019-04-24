@@ -27,6 +27,7 @@ import android.widget.TextView;
 import com.example.admin.myapplication.Adapter.MyAdapter;
 import com.example.admin.myapplication.Object.LichSu;
 import com.example.admin.myapplication.Object.Link;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -215,13 +216,14 @@ public class SearchActivity extends AppCompatActivity {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(SearchActivity.this , MainActivity.class);
                 startActivity(intent);
                 dialog.dismiss();
             }
         });
 
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("outANO", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {

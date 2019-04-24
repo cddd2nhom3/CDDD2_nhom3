@@ -22,9 +22,6 @@
         <activity android:name=".QuenMatKhau" />
         <activity android:name=".ShowSearchHistory" />
 
-        <activity android:name=".TuyenDung">
-
-        </activity>
         <activity android:name=".SearchActivity" />
         <activity android:name=".FirstFragment" />
         <activity android:name=".SecondFragment" />

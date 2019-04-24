@@ -3,7 +3,6 @@ package com.example.admin.myapplication.services;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 
-import com.example.admin.myapplication.Object.NguoiDung;
 import com.example.admin.myapplication.base.BaseFireBase;
 import com.example.admin.myapplication.Object.Users;
 import com.example.admin.myapplication.define.Constants;

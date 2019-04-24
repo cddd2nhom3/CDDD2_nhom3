@@ -44,6 +44,7 @@
     <string name="msg_login_success">Đăng nhập thành công!</string>
     <string name="hscn">HỒ SƠ CÁ NHÂN</string>
     <string name="upload_hscn">Upload</string>
+    <string name="choose">Choose</string>
     <string-array name="TenViecLam">
         <item>An Ninh / Bảo Vệ</item>
         <item>An toàn lao động </item>

@@ -1,8 +1,9 @@
 package com.example.admin.myapplication;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.graphics.Bitmap;;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -15,48 +16,71 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.Toast;
+
+import com.example.admin.myapplication.Object.HoSoCaNhan;
 import com.example.admin.myapplication.base.BaseActivity;
 import com.example.admin.myapplication.listener.RegisterListener;
 import com.example.admin.myapplication.services.RegisterServices;
 import com.example.admin.myapplication.utils.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class NguoiDung extends BaseActivity {
-
-   private Button btnUpload;
-   private ImageButton imgHS;
-
+    private DatabaseReference mDatabase;
+   private Button btnUpload,btnChoose;
+   private ImageView imgHS;
+   private EditText edtHoTen , edtDiaChi , edtSDT;
+   private RadioButton radNam , radNu;
    private Uri filePath;
-
+   //firebase
+    FirebaseStorage storage;
+    StorageReference storageReference;
    private final int PICK_IMAGE_REQUEST = 71;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nguoi_dung);
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
         btnUpload = (Button)findViewById(R.id.btnUpload);
-        imgHS = (ImageButton)findViewById(R.id.imgHSCN);
-
-
+        imgHS = (ImageView)findViewById(R.id.imgHSCN);
+        btnChoose  = (Button)findViewById(R.id.btnChoose);
+        edtHoTen = (EditText)findViewById(R.id.edtHoTen);
+        edtSDT = (EditText)findViewById(R.id.edtSDT);
+        edtDiaChi = (EditText)findViewById(R.id.edtDiachi);
+        radNam = (RadioButton)findViewById(R.id.rdbNam);
+        radNu = (RadioButton)findViewById(R.id.rdbNu);
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 imageUpload();
+                HoSo();
             }
         });
-        imgHS.setOnClickListener(new View.OnClickListener() {
+        btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 imgChoose();
@@ -72,9 +96,9 @@ public class NguoiDung extends BaseActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode,Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_IMAGE_REQUEST && requestCode == RESULT_OK
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
                 && data != null && data.getData() != null){
             filePath = data.getData();
             try {
@@ -88,6 +112,49 @@ public class NguoiDung extends BaseActivity {
     }
 
     private void imageUpload() {
+        if(filePath != null){
+            final ProgressDialog progressDialog = new ProgressDialog(this);
+            progressDialog.setTitle("Uploading...");
+            progressDialog.show();
 
+            StorageReference ref = storageReference.child("images/" + UUID.randomUUID().toString());
+            ref.putFile(filePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    progressDialog.dismiss();
+                    Toast.makeText(NguoiDung.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                }
+            })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            progressDialog.dismiss();
+                            Toast.makeText(NguoiDung.this, "Failed", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            double progress = (100.0 * taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
+                            progressDialog.setMessage("Uploaded" +(int)progress+"%");
+                        }
+                    });
+        }
+    }
+    private void HoSo(){
+        String hoTen = edtHoTen.getText().toString();
+        String diaChi = edtDiaChi.getText().toString();
+        String gioiTinh = "";
+        if(radNam.isChecked()){
+            gioiTinh= radNam.getText().toString();
+        }
+        if(radNu.isChecked()){
+            gioiTinh= radNu.getText().toString();
+        }
+        int soDienThoai = Integer.parseInt(edtSDT.getText().toString());
+        HoSoCaNhan LS = new HoSoCaNhan(hoTen, diaChi, gioiTinh,soDienThoai);
+
+        mDatabase.child("HoSoCaNhan").push().setValue(LS);
+        Toast.makeText(this, "Cập nhật thành công.", Toast.LENGTH_SHORT).show();
     }
 }

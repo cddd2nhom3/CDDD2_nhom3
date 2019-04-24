@@ -1,39 +1,25 @@
 package com.example.admin.myapplication.Object;
 
-public class NguoiDung {
-    private String uid;
+public class HoSoCaNhan {
+
     private String hoTen;
-    private String email;
-    private String matKhau;
     private String diaChi;
     private String gioiTinh;
     private int soDienThoai;
 
-    public NguoiDung() {
-
-    }
-
-    public NguoiDung(String Uid, String hoTen, String email, String matKhau, String diaChi, String gioiTinh, int soDienThoai) {
-        this.uid = Uid;
+    public HoSoCaNhan( String hoTen, String diaChi, String gioiTinh, int soDienThoai) {
         this.hoTen = hoTen;
-        this.email = email;
-        this.matKhau = matKhau;
         this.diaChi = diaChi;
         this.gioiTinh = gioiTinh;
         this.soDienThoai = soDienThoai;
     }
-    public String getUid() { return uid;}
+
+
+
+
 
     public String getHoTen() {
         return hoTen;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getMatKhau() {
-        return matKhau;
     }
 
     public String getDiaChi() {
@@ -48,20 +34,10 @@ public class NguoiDung {
         return soDienThoai;
     }
 
+
+
     public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setMatKhau(String matKhau) {
-        this.matKhau = matKhau;
     }
 
     public void setDiaChi(String diaChi) {
@@ -78,11 +54,8 @@ public class NguoiDung {
 
     @Override
     public String toString() {
-        return "NguoiDung{" +
-                "uid='" + uid + '\'' +
+        return "HoSoCaNhan{" +
                 ", hoTen='" + hoTen + '\'' +
-                ", email='" + email + '\'' +
-                ", matKhau='" + matKhau + '\'' +
                 ", diaChi='" + diaChi + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
                 ", soDienThoai=" + soDienThoai +

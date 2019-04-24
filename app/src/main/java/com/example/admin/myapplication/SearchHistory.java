@@ -42,7 +42,7 @@ public class SearchHistory extends AppCompatActivity {
                 String search_nganh = edtTenViecLam.getText().toString();
                 String search_thanhpho = edtTenTP.getText().toString();
                 LichSu LS = new LichSu(search_chucvu, search_nganh, search_thanhpho);
-                mDatabase.child("SearchHistory").push().setValue(LS);
+                //mDatabase.child("SearchHistory").push().setValue(LS);
             }
         });
     }

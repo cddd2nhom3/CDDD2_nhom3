@@ -16,10 +16,10 @@
         android:title="Công Việc Dành Cho SV Thực Tập" />
     <item
         android:id="@+id/hoSoCaNhan"
-        android:title="Hồ Sơ Cá Nhân" />
+        android:title="Hồ Sơ Cá Nhân"/>
     <item
         android:id="@+id/doiMatKhau"
-        android:title="Đổi Mật Khẩu" />
+        android:title="Đổi Mật Khẩu"/>
 
     <item
         android:id="@+id/lichSuTimKiem"

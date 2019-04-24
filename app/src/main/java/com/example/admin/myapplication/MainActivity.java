@@ -75,7 +75,7 @@ public class MainActivity extends BaseActivity {
             mAuth.removeAuthStateListener(mAuthListener);
         }
     }
-    @OnClick({R.id.btn_login_email, R.id.btn_fb_login, R.id.tv_register,R.id.quenMatKhau})
+    @OnClick({R.id.btn_login_email, R.id.btn_fb_login, R.id.tv_register, R.id.quenMatKhau})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_login_email:

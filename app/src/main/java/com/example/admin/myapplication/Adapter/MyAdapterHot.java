@@ -17,7 +17,7 @@ public class MyAdapterHot extends ArrayAdapter<ThuocTinhHot> {
     int itemlayout;
     ArrayList<ThuocTinhHot> question = null;
 
-    public MyAdapterHot(Activity context, int resource, ArrayList<ThuocTinhHot> objects) {
+    public MyAdapterHot(Activity context, int resource, ArrayList<ThuocTinhHot>objects) {
         super(context, resource, objects);
         // TODO Auto-generated constructor stub
         this.context = context;

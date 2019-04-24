@@ -103,20 +103,5 @@ public class RegisterServices extends BaseFireBase {
             }
         });
     }
-    /*public void createAccountInDatabase(NguoiDung nguoidung, final RegisterListener listener) {
-        mDatabase.child(Constants.NGUOIDUNG)
-                .child(nguoidung.getUid())
-                .setValue(nguoidung)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        listener.registerSuccess();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                listener.registerFailure(e.getMessage());
-            }
-        });
-    }*/
+
 }

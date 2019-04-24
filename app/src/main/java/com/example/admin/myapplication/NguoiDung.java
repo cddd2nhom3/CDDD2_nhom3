@@ -1,14 +1,20 @@
 package com.example.admin.myapplication;
 
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.example.admin.myapplication.base.BaseActivity;
@@ -20,91 +26,68 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class NguoiDung extends BaseActivity {
 
-   /* @BindView(R.id.edtEmail)
-    EditText tvEmail;
-    @BindView(R.id.edtPassword)
-    EditText tvPassword;
-    @BindView(R.id.edtHoTen)
-    EditText tvHoTen;
-    @BindView(R.id.edtDiachi)
-    EditText tvDiachi;
-    @BindView(R.id.edtSDT)
-    EditText tvSdt;
-    private String email;
-    private String passWord;
-    private String hoTen, diachi, sdt;
-    private RegisterServices registerServices;
+   private Button btnUpload;
+   private ImageButton imgHS;
+
+   private Uri filePath;
+
+   private final int PICK_IMAGE_REQUEST = 71;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nguoi_dung);
-        ButterKnife.bind(this);
-        registerServices = new RegisterServices(this);
-    }
 
-    @OnClick({R.id.btnDangKyMoi})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_login_email:
-                if (checkInputData()) {
-                    showProgressDialog("Vui lòng đợi");
-                    registerServices.registerAccount(email, passWord, new RegisterListener() {
-                        @Override
-                        public void registerSuccess() {
-                            hideProgressDialog();
-                            tvEmail.setText("");
-                            tvPassword.setText("");
-                            AlertDialog.Builder builder = new AlertDialog.Builder(NguoiDung.this);
-                            builder.setTitle("Thông Báo");
-                            builder.setMessage(getResources().getString(R.string.verifiation));
-                            builder.setIcon(R.drawable.user);
-                            builder.create().show();
-                        }
+        btnUpload = (Button)findViewById(R.id.btnUpload);
+        imgHS = (ImageButton)findViewById(R.id.imgHSCN);
 
-                        @Override
-                        public void registerFailure(String message) {
-                            hideProgressDialog();
-                            Toast.makeText(NguoiDung.this, message, Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-                break;
-            *//*case R.id.btn_back_login:
-                finish();
-                break;
-            case R.id.btn_reset_password:
-                break;*//*
-        }
-    }
 
-    *//**
-     * Kiểm tra dữ liệu
-     * @return
-     *//*
-    private boolean checkInputData() {
-        if (Utils.isEmpty(tvEmail) && Utils.isEmpty(tvPassword)) {
-            email = tvEmail.getText().toString().trim();
-            passWord = tvPassword.getText().toString().trim();
-            if (!Utils.isEmailValid(email)) {
-                tvEmail.requestFocus();
-                tvEmail.setError(getResources().getString(R.string.email_error));
-                return false;
-            } else {
-                if (passWord.length() < 6) {
-                    tvEmail.requestFocus();
-                    tvEmail.setError(getResources().getString(R.string.pass_erro));
-                    return false;
-                }
+        btnUpload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageUpload();
             }
-            return true;
-        } else {
-            return false;
+        });
+        imgHS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgChoose();
+            }
+        });
+    }
+
+    private void imgChoose() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PICK_IMAGE_REQUEST && requestCode == RESULT_OK
+                && data != null && data.getData() != null){
+            filePath = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),filePath);
+                imgHS.setImageBitmap(bitmap);
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
         }
-    }*/
+    }
+
+    private void imageUpload() {
+
+    }
 }

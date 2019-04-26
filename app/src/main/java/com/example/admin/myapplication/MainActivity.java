@@ -54,18 +54,11 @@ public class MainActivity extends BaseActivity {
     private String email;
     private String passWord;
     private LoginServices loginServices;
-    private static MainActivity mainActivity;
-    private CallbackManager callbackManager;
-    private FacebookCallback<LoginResult> loginResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        callbackManager = CallbackManager.Factory.create();
-        mainActivity = this;
-        LoginManager.getInstance().registerCallback(callbackManager, loginResult);
         loginServices = new LoginServices();
         mAuth =  FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -89,7 +82,6 @@ public class MainActivity extends BaseActivity {
 
             }
         };
-        printKeyHash(this);
     }
     @Override
     public void onStart() {
@@ -104,7 +96,7 @@ public class MainActivity extends BaseActivity {
             mAuth.removeAuthStateListener(mAuthListener);
         }
     }
-    @OnClick({R.id.btn_login_email, R.id.btn_fb_login, R.id.tv_register,R.id.quenMatKhau})
+    @OnClick({R.id.btn_login_email, R.id.tv_register,R.id.quenMatKhau})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_login_email:
@@ -124,10 +116,6 @@ public class MainActivity extends BaseActivity {
                         }
                     });
                 }
-                break;
-            case R.id.btn_fb_login:
-                loginFaceBook();
-                startActivity(new Intent(this, SearchActivity.class));
                 break;
             case R.id.tv_register:
                 startActivity( new Intent(this, SignUp.class));
@@ -191,95 +179,5 @@ public class MainActivity extends BaseActivity {
         } else {
             return false;
         }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-    }
-    //Login facebook with permisstion
-    public void loginFaceBook() {
-        LoginManager.getInstance().logInWithReadPermissions(mainActivity, Arrays.asList("public_profile", "user_friends","email"));
-    }
-    //Hàm check login facebook
-    public boolean isLoggedInFaceBook() {
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        return accessToken != null;
-    }
-    /*public void initFaceBook () {
-        loginResult = new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                //Login thành công xử lý tại đây
-                GraphRequest request = GraphRequest.newMeRequest(
-                        AccessToken.getCurrentAccessToken(),
-                        new GraphRequest.GraphJSONObjectCallback() {
-                            @Override
-                            public void onCompleted(JSONObject object,
-                                                    GraphResponse response) {
-                                // Application code
-                                String name = object.optString(getString(R.string.name));
-                                String id = object.optString(getString(R.string.id));
-                                String email = object.optString(getString(R.string.email));
-                                String link = object.optString(getString(R.string.link));
-                                URL imageURL = extractFacebookIcon(id);
-                                Log.d("name: ",name);
-                                Log.d("id: ",id);
-                                Log.d("email: ",email);
-                                Log.d("link: ",link);
-                                Log.d("imageURL: ",imageURL.toString());
-
-                            }
-                        });
-                Bundle parameters = new Bundle();
-                parameters.putString(getString(R.string.fields), getString(R.string.fields_name));
-                request.setParameters(parameters);
-                request.executeAsync();
-
-            }
-
-            @Override
-            public void onCancel() {
-
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-
-            }
-        };
-    }*/
-    //Get keyHash
-    public String printKeyHash(Activity context) {
-        PackageInfo packageInfo;
-        String key = null;
-        try {
-            //getting application package name, as defined in manifest
-            String packageName = context.getApplicationContext().getPackageName();
-
-            //Retriving package info
-            packageInfo = context.getPackageManager().getPackageInfo(packageName,
-                    PackageManager.GET_SIGNATURES);
-
-            Log.e("Package Name=", context.getApplicationContext().getPackageName());
-
-            for (android.content.pm.Signature signature : packageInfo.signatures) {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                key = new String(Base64.encode(md.digest(), 0));
-
-                // String key = new String(Base64.encodeBytes(md.digest()));
-                Log.e("Key Hash=", key);
-            }
-        } catch (PackageManager.NameNotFoundException e1) {
-            Log.e("Name not found", e1.toString());
-        } catch (NoSuchAlgorithmException e) {
-            Log.e("No such an algorithm", e.toString());
-        } catch (Exception e) {
-            Log.e("Exception", e.toString());
-        }
-
-        return key;
     }
 }

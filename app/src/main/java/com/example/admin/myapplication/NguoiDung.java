@@ -38,7 +38,7 @@ public class NguoiDung extends BaseActivity {
    private EditText edtHoTen , edtDiaChi , edtSDT;
    private RadioButton radNam , radNu;
    private Uri filePath;
-   private String userId;
+   private String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
    //firebase
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -103,7 +103,7 @@ public class NguoiDung extends BaseActivity {
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            StorageReference ref = storageReference.child("images/" + UUID.randomUUID().toString());
+            StorageReference ref = storageReference.child("images/"+userId+"/"+ UUID.randomUUID().toString());
             ref.putFile(filePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -137,9 +137,9 @@ public class NguoiDung extends BaseActivity {
         if(radNu.isChecked()){
             gioiTinh= radNu.getText().toString();
         }
-        int soDienThoai = Integer.parseInt(edtSDT.getText().toString());
-        HoSoCaNhan LS = new HoSoCaNhan(hoTen, diaChi, gioiTinh,soDienThoai);
-        userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String soDienThoai = edtSDT.getText().toString();
+        HoSoCaNhan LS = new HoSoCaNhan(hoTen, diaChi, gioiTinh, soDienThoai);
+
         mDatabase.child("USers").child(userId).child("HoSoCaNhan").push().setValue(LS);
         Toast.makeText(this, "Cập nhật thành công.", Toast.LENGTH_SHORT).show();
     }

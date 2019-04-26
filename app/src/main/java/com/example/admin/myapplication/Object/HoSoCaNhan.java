@@ -5,9 +5,9 @@ public class HoSoCaNhan {
     private String hoTen;
     private String diaChi;
     private String gioiTinh;
-    private int soDienThoai;
+    private String soDienThoai;
 
-    public HoSoCaNhan( String hoTen, String diaChi, String gioiTinh, int soDienThoai) {
+    public HoSoCaNhan( String hoTen, String diaChi, String gioiTinh, String soDienThoai) {
         this.hoTen = hoTen;
         this.diaChi = diaChi;
         this.gioiTinh = gioiTinh;
@@ -15,8 +15,8 @@ public class HoSoCaNhan {
     }
 
 
-
-
+    public HoSoCaNhan() {
+    }
 
     public String getHoTen() {
         return hoTen;
@@ -30,7 +30,7 @@ public class HoSoCaNhan {
         return gioiTinh;
     }
 
-    public int getSoDienThoai() {
+    public String getSoDienThoai() {
         return soDienThoai;
     }
 
@@ -48,7 +48,7 @@ public class HoSoCaNhan {
         this.gioiTinh = gioiTinh;
     }
 
-    public void setSoDienThoai(int soDienThoai) {
+    public void setSoDienThoai(String soDienThoai) {
         this.soDienThoai = soDienThoai;
     }
 

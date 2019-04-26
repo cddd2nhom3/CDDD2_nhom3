@@ -2,30 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <group android:checkableBehavior="single">
-    <item
-        android:id="@+id/newhot"
-        android:title="NEWS HOT" />
-    <item
-        android:id="@+id/test1"
-        android:title="Công Nghệ Thông Tin" />
-    <item
-        android:id="@+id/test2"
-        android:title="Quản Trị Kinh Doanh" />
-    <item
-        android:id="@+id/test3"
-        android:title="Công Việc Dành Cho SV Thực Tập" />
-    <item
-        android:id="@+id/hoSoCaNhan"
-        android:title="Hồ Sơ Cá Nhân"/>
-    <item
-        android:id="@+id/doiMatKhau"
-        android:title="Đổi Mật Khẩu"/>
-
-    <item
-        android:id="@+id/lichSuTimKiem"
-        android:title="Lịch Sử Tìm Kiếm" />
-    <item
-        android:id="@+id/test4"
-        android:title="Đăng Xuất" />
+        <item
+            android:id="@+id/newhot"
+            android:title="NEWS HOT" />
+        <item
+            android:id="@+id/test1"
+            android:title="Công Nghệ Thông Tin" />
+        <item
+            android:id="@+id/test2"
+            android:title="Quản Trị Kinh Doanh" />
+        <item
+            android:id="@+id/test3"
+            android:title="Công Việc Dành Cho SV Thực Tập" />
+        <item
+            android:id="@+id/hoSoCaNhan"
+            android:title="Cập Nhạt Hồ Sơ Cá Nhân"/>
+        <item
+            android:id="@+id/doiMatKhau"
+            android:title="Đổi Mật Khẩu"/>
+        <item
+            android:id="@+id/lichSuTimKiem"
+            android:title="Lịch Sử Tìm Kiếm" />
+        <item
+            android:id="@+id/xemHoSoCaNhan"
+            android:title="Xem Hồ Sơ Cá nhân" />
+        <item
+            android:id="@+id/test4"
+            android:title="Đăng Xuất" />
     </group>
 </menu>

@@ -296,6 +296,9 @@ public class SearchActivity extends AppCompatActivity {
         }else if (id == R.id.doiMatKhau) {
             Intent in = new Intent(SearchActivity.this, DoiPassActivity.class);
             startActivity(in);
+        }else if (id == R.id.xemHoSoCaNhan) {
+            Intent in = new Intent(SearchActivity.this, ShowPersonInformation.class);
+            startActivity(in);
         }
     }
 }

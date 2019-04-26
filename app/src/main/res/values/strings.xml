@@ -14,7 +14,7 @@
     <string name="gioi_tinh">Giới tính:</string>
     <string name="dia_chi">Địa chỉ:</string>
     <string name="pass">Mật khẩu:</string>
-    <string name="email">E-mail:</string>
+    <string name="email">E-mail: </string>
     <string name="ten_dang_nhap">Tên đăng nhập:</string>
     <string name="name">Họ tên:</string>
     <string name="ten_doanh_nghiep">Tên doanh nghiệp:</string>
@@ -42,6 +42,7 @@
     <string name="diadiem">Địa Điểm </string>
     <string name="timkiem">Tìm Kiếm </string>
     <string name="msg_login_success">Đăng nhập thành công!</string>
+    <string name="CapNhatHscn">CẬP NHẬT HỒ SƠ CÁ NHÂN</string>
     <string name="hscn">HỒ SƠ CÁ NHÂN</string>
     <string name="upload_hscn">Upload</string>
     <string name="choose">Choose</string>

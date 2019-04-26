@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DoiPassActivity"/>
+        <activity android:name=".ShowPersonInformation"/>
         <activity android:name=".NguoiDung" />
         <activity android:name=".TrangChu" />
         <activity android:name=".HomeActivity" />

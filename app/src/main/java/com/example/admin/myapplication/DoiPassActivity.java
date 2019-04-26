@@ -17,8 +17,6 @@ import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.w3c.dom.Text;
-
 public class DoiPassActivity extends AppCompatActivity {
 
     private EditText edtPassOld , edtPassNew , edtRePassNew;
@@ -39,13 +37,11 @@ public class DoiPassActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email = user.getEmail();
-                if (edtPassNew.getText().toString() == edtRePassNew.getText().toString()) {
-                    Toast.makeText(DoiPassActivity.this, "Re-Password not match passnew", Toast.LENGTH_SHORT).show();
-                }
-                else {
+
 
                     AuthCredential credential = EmailAuthProvider
                             .getCredential(email, edtPassOld.getText().toString());
+                if (edtPassNew.getText().toString().equals(edtRePassNew.getText().toString()) ) {
 
                     user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -66,6 +62,10 @@ public class DoiPassActivity extends AppCompatActivity {
                             }
                         }
                     });
+                }
+                else {
+
+                    Toast.makeText(DoiPassActivity.this, "Re-Password not match passnew", Toast.LENGTH_SHORT).show();
                 }
             }
         });

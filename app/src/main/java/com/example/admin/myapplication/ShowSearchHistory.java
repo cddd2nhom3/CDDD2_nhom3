@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.example.admin.myapplication.Adapter.LichSuTimKiem;
 import com.example.admin.myapplication.Object.LichSu;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 
 public class ShowSearchHistory extends AppCompatActivity {
     private DatabaseReference mDatabase;
+    private String userId;
     ArrayList <LichSu> arrSearchHistory;
     LichSuTimKiem adapter ;
 
@@ -46,8 +48,8 @@ public class ShowSearchHistory extends AppCompatActivity {
             }
         });
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
-        mDatabase.child("SearchHistory").addChildEventListener(new ChildEventListener() {
+        userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        mDatabase.child("USers").child(userId).child("SearchHistory").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 LichSu ls = dataSnapshot.getValue(LichSu.class);

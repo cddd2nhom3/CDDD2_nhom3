@@ -38,6 +38,7 @@ public class SearchActivity extends AppCompatActivity {
     static ArrayList<Link> link = new ArrayList<Link>();
     private MyAdapter adapter;
     private DatabaseReference mDatabase;
+    private String userId;
 
     String strUrl = "https://careerbuilder.vn/viec-lam/";
     String Url1 = "c";
@@ -149,14 +150,14 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-
+                userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 String tenVLChon = edtTenViecLam.getText().toString();
                 String tenTPChon = edtTenTP.getText().toString();
                 String search_chucvu= edtChucDanh.getText().toString();
                 String search_nganh = edtTenViecLam.getText().toString();
                 String search_thanhpho = edtTenTP.getText().toString();
                 LichSu LS = new LichSu(search_chucvu, search_nganh, search_thanhpho);
-                mDatabase.child("SearchHistory").push().setValue(LS);
+                mDatabase.child("USers").child(userId).child("SearchHistory").push().setValue(LS);
 
                 Log.d("testTP",tenVLChon);
                 Log.d("testVL",tenTPChon);

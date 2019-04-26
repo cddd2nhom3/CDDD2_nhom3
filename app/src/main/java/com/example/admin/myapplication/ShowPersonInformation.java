@@ -41,12 +41,10 @@ public class ShowPersonInformation extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 HoSoCaNhan hscn = dataSnapshot.getValue(HoSoCaNhan.class);
-                edtHoTen.setText(hscn.getHoTen().toString());
-                edtDiaChi.setText(hscn.getDiaChi().toString());
-                edtGioiTinh.setText(hscn.getGioiTinh().toString());
-                edtSdt.setText(hscn.getSoDienThoai().toString());
-                edtHoTen.setText(hscn.getHoTen().toString());
-
+                edtHoTen.setText(hscn.getHoTen());
+                edtDiaChi.setText(hscn.getDiaChi());
+                edtGioiTinh.setText(hscn.getGioiTinh());
+                edtSdt.setText(hscn.getSoDienThoai());
             }
 
             @Override

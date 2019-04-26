@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoiPassActivity">
+
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doi_mat_khau"
+        android:textColor="@color/hot"
+        android:textStyle="bold"
+        android:textSize="40sp"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtPassOld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/pass_old"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtPassNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/passnew"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtRePassNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/re_passnew"/>
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/submit" />
+</LinearLayout>

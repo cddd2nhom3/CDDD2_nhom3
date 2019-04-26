@@ -20,6 +20,7 @@ import com.example.admin.myapplication.Object.HoSoCaNhan;
 import com.example.admin.myapplication.base.BaseActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -37,6 +38,7 @@ public class NguoiDung extends BaseActivity {
    private EditText edtHoTen , edtDiaChi , edtSDT;
    private RadioButton radNam , radNu;
    private Uri filePath;
+   private String userId;
    //firebase
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -137,8 +139,8 @@ public class NguoiDung extends BaseActivity {
         }
         int soDienThoai = Integer.parseInt(edtSDT.getText().toString());
         HoSoCaNhan LS = new HoSoCaNhan(hoTen, diaChi, gioiTinh,soDienThoai);
-
-        mDatabase.child("HoSoCaNhan").push().setValue(LS);
+        userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        mDatabase.child("USers").child(userId).child("HoSoCaNhan").push().setValue(LS);
         Toast.makeText(this, "Cập nhật thành công.", Toast.LENGTH_SHORT).show();
     }
 }

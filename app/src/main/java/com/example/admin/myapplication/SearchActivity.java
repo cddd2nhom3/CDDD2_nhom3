@@ -27,7 +27,6 @@ import android.widget.TextView;
 import com.example.admin.myapplication.Adapter.MyAdapter;
 import com.example.admin.myapplication.Object.LichSu;
 import com.example.admin.myapplication.Object.Link;
-import com.facebook.AccessToken;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -218,7 +217,6 @@ public class SearchActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
                 FirebaseAuth.getInstance().signOut();
-                isLoggedInFaceBook();
                 Intent intent = new Intent(SearchActivity.this , MainActivity.class);
                 startActivity(intent);
                 dialog.dismiss();
@@ -237,10 +235,6 @@ public class SearchActivity extends AppCompatActivity {
 
         AlertDialog alert = builder.create();
         alert.show();
-    }
-    public boolean isLoggedInFaceBook() {
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        return accessToken != null;
     }
 
     private void setupDrawerContent() {
@@ -297,6 +291,9 @@ public class SearchActivity extends AppCompatActivity {
         }
         else if (id == R.id.hoSoCaNhan) {
             Intent in = new Intent(SearchActivity.this, NguoiDung.class);
+            startActivity(in);
+        }else if (id == R.id.doiMatKhau) {
+            Intent in = new Intent(SearchActivity.this, DoiPassActivity.class);
             startActivity(in);
         }
     }

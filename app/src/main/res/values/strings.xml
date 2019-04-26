@@ -47,6 +47,11 @@
     <string name="choose">Choose</string>
     <string name="facebook_app_id">699802623773698</string>
     <string name="fb_login_protocol_scheme">fb699802623773698</string>
+    <string name="doi_mat_khau">Đổi Mật Khẩu</string>
+    <string name="pass_old">Pass Old</string>
+    <string name="passnew">PassNew</string>
+    <string name="re_passnew">Re-PassNew</string>
+    <string name="submit">submit</string>
 
 
     <string-array name="TenViecLam">

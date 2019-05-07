@@ -2,16 +2,18 @@ package com.example.admin.myapplication.Object;
 
 public class HoSoCaNhan {
 
-    private String hoTen;
-    private String diaChi;
-    private String gioiTinh;
-    private String soDienThoai;
+    public String hoTen;
+    public String diaChi;
+    public String gioiTinh;
+    public String soDienThoai;
+    public String linkImage;
 
-    public HoSoCaNhan( String hoTen, String diaChi, String gioiTinh, String soDienThoai) {
+    public HoSoCaNhan( String hoTen, String diaChi, String gioiTinh, String soDienThoai, String linkImage) {
         this.hoTen = hoTen;
         this.diaChi = diaChi;
         this.gioiTinh = gioiTinh;
         this.soDienThoai = soDienThoai;
+        this.linkImage = linkImage;
     }
 
 
@@ -34,7 +36,9 @@ public class HoSoCaNhan {
         return soDienThoai;
     }
 
-
+    public String getLinkImage() {
+        return linkImage;
+    }
 
     public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
@@ -52,13 +56,18 @@ public class HoSoCaNhan {
         this.soDienThoai = soDienThoai;
     }
 
+    public void setLinkImage(String linkImage) {
+        this.linkImage = linkImage;
+    }
+
     @Override
     public String toString() {
         return "HoSoCaNhan{" +
-                ", hoTen='" + hoTen + '\'' +
+                "hoTen='" + hoTen + '\'' +
                 ", diaChi='" + diaChi + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
-                ", soDienThoai=" + soDienThoai +
+                ", soDienThoai='" + soDienThoai + '\'' +
+                ", linkImage='" + linkImage + '\'' +
                 '}';
     }
 }

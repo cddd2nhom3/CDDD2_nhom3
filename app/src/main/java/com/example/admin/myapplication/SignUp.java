@@ -1,5 +1,6 @@
 package com.example.admin.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -66,6 +67,8 @@ public class SignUp extends BaseActivity {
                 finish();
                 break;
             case R.id.btn_reset_password:
+                Intent in = new Intent(SignUp.this, QuenMatKhau.class);
+                startActivity(in);
                 break;
         }
     }
